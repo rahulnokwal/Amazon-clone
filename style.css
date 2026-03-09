@@ -134,6 +134,7 @@
   align-items: center;
   position: fixed;
   top: 60px;
+  z-index: 100;
 }
 
 .nav-down-1 {
@@ -278,6 +279,7 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-content: center;
+  padding-top: 70px;
 }
 .products {
   height: 360px;
@@ -292,6 +294,8 @@
 .products-img img {
   height: 100%;
   width: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 .product-info {
   display: flex;
@@ -301,6 +305,7 @@
 .name {
   font-size: 20px;
   margin: 10px 0 5px 0;
+  white-space: nowrap;
 }
 .price {
   font-size: 24px;
@@ -311,17 +316,92 @@
   color: rgb(27, 26, 26);
   font-weight: 100;
 }
-.product-add-btn {
+
+.cart-section {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #e2e7e6;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 20px 20px 20px;
+  overflow-y: hidden;
+}
+.cart-items {
+  height: 100%;
+  width: 75%;
+  overflow: scroll;
+  scrollbar-width: none;
+  background-color: #e2e7e6;
+  padding-top: 40px;
+}
+.empty-msg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cart-products {
+  height: 100px;
+  background-color: whitesmoke;
+  margin-top: 24px;
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.cart-products-img {
+  height: 100px;
+  width: 20%;
+}
+.cart-products-img img {
+  height: 100%;
+  object-fit: cover;
+}
+.cart-products-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.subtotal-section {
+  height: 100%;
+  width: 25%;
+  padding: 30px 5px 5px;
+}
+.subtotal-section-price {
+  white-space: nowrap;
+  background-color: #fff;
+  height: auto;
+  width: 320px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.subtotal-section-price p {
+  font-size: 24px;
+  font-weight: 100;
+  margin-bottom: 20px;
+}
+.subtotal-section-price p span {
+  font-size: 24px;
+  font-weight: 550;
+}
+.btn {
   padding: 7px 15px;
   font-weight: 500;
   background-color: #f0ca32;
   border: none;
   border-radius: 50px;
 }
-.product-add-btn:hover {
+.btn:hover {
   background-color: #fece14;
 }
-.product-add-btn:active {
+.btn:active {
   scale: 0.95;
 }
 .footerBackToTop {
